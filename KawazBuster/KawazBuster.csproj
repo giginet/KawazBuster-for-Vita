@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{282B9BC3-FA50-40F9-94B8-27B0EEF6E4E6}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>KawazBuster</RootNamespace>
+    <AssemblyName>KawazBuster</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.GameEngine2D" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="TitleScene.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Simple.fcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\images\howto\howto0-hd.png" />
+    <Content Include="resources\images\howto\howto_button.png" />
+    <Content Include="resources\images\main\bomb-hd.png" />
+    <Content Include="resources\images\main\bomb.png" />
+    <Content Include="resources\images\main\bomb_effect-hd.png" />
+    <Content Include="resources\images\main\bomb_effect.png" />
+    <Content Include="resources\images\main\main_background-hd.png" />
+    <Content Include="resources\images\main\main_background.png" />
+    <Content Include="resources\images\main\main_layer0-hd.png" />
+    <Content Include="resources\images\main\main_layer0.png" />
+    <Content Include="resources\images\main\main_layer1-hd.png" />
+    <Content Include="resources\images\main\main_layer1.png" />
+    <Content Include="resources\images\main\ready-hd.png" />
+    <Content Include="resources\images\title\credit-hd.png" />
+    <Content Include="resources\images\title\credit.png" />
+    <Content Include="resources\images\title\credit_selected-hd.png" />
+    <Content Include="resources\images\title\credit_selected.png" />
+    <Content Include="resources\images\title\howto-hd.png" />
+    <Content Include="resources\images\title\howto.png" />
+    <Content Include="resources\images\title\howto_selected-hd.png" />
+    <Content Include="resources\images\title\howto_selected.png" />
+    <Content Include="resources\images\title\kawaz-hd.png" />
+    <Content Include="resources\images\title\kawaz.png" />
+    <Content Include="resources\images\title\logo-hd.png" />
+    <Content Include="resources\images\title\logo.png" />
+    <Content Include="resources\images\title\start-hd.png" />
+    <Content Include="resources\images\title\start.png" />
+    <Content Include="resources\images\title\start_selected-hd.png" />
+    <Content Include="resources\images\title\start_selected.png" />
+    <Content Include="resources\images\title\title_background-hd.png" />
+    <Content Include="resources\sound\bgm\title.mp3" />
+    <Content Include="resources\sound\bgm\title.wav" />
+    <Content Include="resources\images\title\title_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\images\main\Thumbs.db" />
+  </ItemGroup>
+</Project>
